@@ -151,16 +151,16 @@ class MPU6050(object):
         x = 0
         y = 0
         
-        for i in range(1000):
+        for i in range(100):
             z += self.gyro.z
             x += self.gyro.x
             y += self.gyro.y
             time.sleep(0.001)
-        self.gyroZoffset = z / 1000
-        self.gyroXoffset = x / 1000
-        self.gyroYoffset = y /1000
+        self.gyroZoffset = z / 100
+        self.gyroXoffset = x / 100
+        self.gyroYoffset = y /100
         print("Calibration finished")
-        time.sleep(0.5)
+        time.sleep(0.1)
         
     def update(self):
         accY = self.accel.y
