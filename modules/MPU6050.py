@@ -191,13 +191,13 @@ class MPU6050(object):
         
     def getAngleZ(self):
         self.update()
-        return self.angleZ+180
+        return int(self.angleZ+180)
     def getAngleX(self):
         self.update()
-        return self.angleX+180
+        return int(self.angleX+180)
     def getAngleY(self):
         self.update()
-        return self.angleY+180
+        return int(self.angleY+180)
     
     def setUp(self):
         self.begin()
