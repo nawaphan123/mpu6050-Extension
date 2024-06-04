@@ -13,18 +13,18 @@ Blockly.Python['mpu6050_Update'] = function(block) {
 
 Blockly.Python['mpu6050_get_Acc'] = function(block) {
   var dropdown_axis = block.getFieldValue('axis');
-  var code = `mpu.accel.${dropdown_axis}`;
+  var code = `mpu.accel.${dropdown_axis}()`;
   return [code, Blockly.Python.ORDER_NONE];
 };
 
 Blockly.Python['mpu6050_get_Gyro'] = function(block) {
   var dropdown_axis = block.getFieldValue('axis');
-  var code = `mpu.gyro.${dropdown_axis}`;
+  var code = `mpu.gyro.${dropdown_axis}()`;
   return [code, Blockly.Python.ORDER_NONE];
 };
 Blockly.Python['mpu6050_get_Angle'] = function(block) {
   var dropdown_axis = block.getFieldValue('angle');
-  var code = `mpu.getAngle${dropdown_axis}`;
+  var code = `mpu.getAngle${dropdown_axis}()`;
   return [code, Blockly.Python.ORDER_NONE];
 };
 
